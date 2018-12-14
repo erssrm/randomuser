@@ -33,7 +33,7 @@ Node Version > 6.X
 
 ## Download the apk 
 
-* Download the apk ( randomuser.zip )and install it in your android mobile( make sure you have checked the developer permision in your phone).
+* Download the apk ( randomUser-APK.apk )and install it in your android mobile( make sure you have checked the developer permision in your phone).
 
 # Happy Coding
 
