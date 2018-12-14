@@ -1,0 +1,18 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>View Location</ion-title>
+        <ion-buttons end>
+        <button ion-button (click)="closeModal()">Close</button>
+        </ion-buttons>
+    </ion-navbar>
+    
+    </ion-header>
+    <ion-content>
+        <ion-card-content>
+            {{userInfo | json}}
+            <!-- <p>Latitude: {{userInfo.location.coordinates.latitude}}</p>
+            <p>Longitude: {{userInfo.location.coordinates.longitude}}</p> -->
+          </ion-card-content>
+      <div #map id="map" style="height: 80%;"></div> 
+    </ion-content>

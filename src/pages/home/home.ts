@@ -32,6 +32,11 @@ export class HomePage {
     console.log("userList======>", data)
     let userDetailsmodal = this.modalCtrl.create('ModalPageUserPage', data);
     userDetailsmodal.present();
+  } 
+  public openMapModal(data){
+    console.log("userList======>", data)
+    let userDetailsmodal = this.modalCtrl.create('ModalpadeMapPage', data);
+    userDetailsmodal.present();
   }  
   doInfinite(event) {
     this.initialPage++;
