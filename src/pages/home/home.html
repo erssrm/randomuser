@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Random Users
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content >
   <ion-grid>
     <ion-row>
       <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 *ngFor="let userList of userLists">
@@ -14,17 +14,25 @@
           <img src={{userList.picture.large}}/>
           <ion-card-content>
             <ion-card-title>
-              {{userList.name.title}}
+              {{userList.name.title}} {{userList.name.last}}, {{userList.name.first}}
             </ion-card-title>
-            <p>
-              {{userList.email}}
-            </p>
+            <button ion-button icon-start (click)="openUserInfoModal(userList)">
+              <ion-icon name="person"></ion-icon>
+              User Info
+            </button>
+            <button ion-button icon-start (click)="openLocationModal()">
+              <ion-icon name="pin"></ion-icon>
+              Location
+            </button>
           </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-infinite-scroll (infinite)="$event.waitFor(doInfinite($event))">
-      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."></ion-infinite-scroll-content>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 </ion-content>
