@@ -7,7 +7,7 @@ View random User Detsils
 This ionic app for showing details of random user.
 
 ### Prerequisites
-Auther : Smruti Ranjan
+Auther : Smruti Ranjan Mohanta
 
 mobile : 7204995711
 
